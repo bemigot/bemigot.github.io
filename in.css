@@ -1,3 +1,11 @@
+@media (max-width: 640px) {
+  #logo > img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 .text-pad {
-  padding-left: 2px;
+  max-width: 640px;
+  padding: 0 16px;
 }
