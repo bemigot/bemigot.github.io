@@ -1,0 +1,38 @@
+---
+layout: base.njk
+description: A research project on self-learning and best educational practices — across computer programming, systems design, foreign languages, linguistics, and history — powered by machine learning (ML) and large and small language models (LLM, SLM).
+---
+<section class="intro">
+  <div class="intro-logo">
+    <img src="/img/Bemigotik.jpg" alt="a hand drawn Bemigot mascot — a capital letter B with small ears, an eye, mouth and the right nostril. Looks like a curious hippo.">
+  </div>
+  <div class="intro-text">
+    <h1>Bemigot</h1>
+    <p>
+      <em>Bemigot</em> is a research project focused on self-learning and best
+      educational practices, particularly in the fields of
+      <em>computer programming</em>, <em>systems design</em>,
+      <em>foreign languages</em>, <em>linguistics</em>, and <em>history</em>.
+    </p>
+    <p>
+      Machine Learning and Large (and Small) Language Models rejuvenated the
+      project at the dawn of 2025, and Bemigot hopes to ride this wave for the
+      foreseeable future.
+    </p>
+  </div>
+</section>
+
+{% if collections.posts.length %}
+<section class="recent">
+  <h2>Latest writing</h2>
+  <ul class="post-list">
+    {% for post in collections.posts | head(3) %}
+    <li>
+      <time datetime="{{ post.date | isoDate }}">{{ post.date | isoDate }}</time>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="more"><a href="/blog/">All posts →</a></p>
+</section>
+{% endif %}

@@ -1,0 +1,14 @@
+{
+  "name": "bemigot.org",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal landing page and blog for the Bemigot research project.",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-rss": "^1.2.0"
+  }
+}

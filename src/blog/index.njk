@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: Blog
+permalink: /blog/
+description: Writing from the Bemigot research project.
+---
+<h1>Blog</h1>
+
+{% if collections.posts.length %}
+<ul class="post-list">
+  {% for post in collections.posts %}
+  <li>
+    <time datetime="{{ post.date | isoDate }}">{{ post.date | isoDate }}</time>
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>Nothing here yet.</p>
+{% endif %}

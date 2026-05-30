@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang or 'en' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/bem16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/bem32.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="{{ site.title }}">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">
+      <img class="brand-mark" src="/img/bem32.png" alt="" width="28" height="28">
+      <span class="brand-name">Bemigot</span>
+    </a>
+    <nav class="site-nav">
+      <a href="/blog/">Blog</a>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <p>© {{ buildYear }} Bemigot — a research project.</p>
+  </footer>
+</body>
+</html>
