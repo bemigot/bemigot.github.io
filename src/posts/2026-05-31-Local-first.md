@@ -39,20 +39,12 @@ they are) with a reasonable effort
   As for a private space company: sure, you cannot run Raptor engine on
   a Macbook, or in any cloud. It cannot be simulated easily either.
   Though the simulation software should be buildable, runnable and testable,
-  at a certain scale. Size does matter, folks!
-  As well as reasonable competence expectations.
-- But KC itself introduces failure modes: misconfigured realm, clock skew,
-  expired certs... - Correct. The point is to surface those on your laptop,
-  not in production. A failure mode you can reproduce locally is containable;
-  one you can only hit in staging is a crisis.
-- KC in Docker is too slow and heavy for local dev. - A properly engineered
-  local setup negates this: a containerised KC in dev mode, a pre-seeded realm
-  export committed to the repo — one-time investment that pays for every
-  developer from day one. Rough overhead: ~600 MB RAM, ~440 MB image pull,
-  typically under 30 s startup on modern hardware. A fair tax for testing KC
-  behaviour as it matters in production.
-  For severely resource-constrained machines, point 4 covers it — ephemeral
-  shared infrastructure exists for exactly that edge case, not as a norm.
+  at a certain scale. Size does matter, folks — as do
+  reasonable competence expectations.
+- But KC in your example itself introduces failure modes: misconfigured
+  realm, clock skew, expired certs... - Correct. The point is to surface
+  those on your laptop, not in production. A failure mode you can reproduce
+  locally is containable; one you can only hit in staging is a crisis.
 - Does this mean unit tests must run against KC too? - No. They mock
   at the auth boundary — that is normal test isolation, not "turning KC off".
   The distinction matters.
