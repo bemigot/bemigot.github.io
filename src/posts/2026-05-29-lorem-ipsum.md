@@ -3,6 +3,12 @@ title: "Lorem ipsum"
 description: "Why self-learning tools should run close to the learner — on the device, under the learner's control."
 ---
 
+*Disclaimer: This post is written by Claude Opus 4.8, who was given only the
+main page draft and the **local-first** slug — not a bad try, me thinks.
+—Bemigot*
+
+---
+
 This is the first post on the Bemigot blog — equal parts placeholder and
 statement of intent. It exists so the layout has something to render, and so I
 have a place to start thinking out loud.
